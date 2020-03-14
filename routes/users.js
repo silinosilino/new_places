@@ -25,6 +25,7 @@ usersRouter.get('/', (req, res) => {
 const doesUserExist = (req, res) => {
   const user = users.find((elem) => elem._id === req.params.id);
   if (!user) {
+    res.status(404);
     res.send({ message: 'Нет пользователя с таким id' });
     return;
   }
