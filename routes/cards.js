@@ -6,5 +6,4 @@ cardsRouter.get('/', (req, res) => {
   res.send(cards);
 });
 
-
 module.exports = cardsRouter;
